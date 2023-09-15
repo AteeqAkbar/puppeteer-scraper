@@ -4,7 +4,7 @@ const fs = require("fs");
 const puppeteer = require("puppeteer");
 const puppeteerExtra = require("puppeteer-extra");
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
-const data = require("./combinedDataNew.json");
+const data = require("./combinedData.json");
 puppeteerExtra.use(AdblockerPlugin());
 const app = express();
 const port = 3006;
@@ -34,6 +34,9 @@ app.use("/logs", (req, res) => {
   res.json({ logs: logBuffer });
 });
 
+app.get("/hello", (req, res) => {
+  res.json({ message: "Hello, logging API!" });
+});
 app.get("/", (req, res) => {
   const retryDelay = 5000; // 5 seconds (adjust as needed)
   const maxRetries = 5; // Maximum number of retries (adjust as needed)
