@@ -46,6 +46,7 @@ app.get("/", (req, res) => {
       headless: true,
       defaultViewport: false,
       userDataDir: "./tmp",
+      args: ["--no-sandbox"],
     });
     const page = await browser.newPage();
 
