@@ -1,0 +1,25 @@
+{"level":"info","message":"GET /","timestamp":"2023-09-15T10:56:02.822Z"}
+{"level":"info","message":"Request to the root endpoint","timestamp":"2023-09-15T10:56:02.828Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2023-09-15T10:56:03.382Z"}
+{"level":"info","message":"GET /","timestamp":"2023-09-15T10:58:15.976Z"}
+{"level":"info","message":"Request to the root endpoint","timestamp":"2023-09-15T10:58:15.979Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T10:58:19.772Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T10:59:05.025Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T10:59:06.631Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T10:59:07.851Z"}
+{"level":"info","message":"GET /","timestamp":"2023-09-15T11:01:21.348Z"}
+{"level":"info","message":"Request to the root endpoint","timestamp":"2023-09-15T11:01:21.352Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:32.267Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:37.473Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:39.613Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:41.896Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:43.488Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:01:45.226Z"}
+{"level":"info","message":"GET /","timestamp":"2023-09-15T11:02:47.497Z"}
+{"level":"info","message":"Request to the root endpoint","timestamp":"2023-09-15T11:02:47.498Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:02:50.872Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:02:51.938Z"}
+{"level":"info","message":"GET /","timestamp":"2023-09-15T11:07:53.843Z"}
+{"level":"info","message":"Request to the root endpoint","timestamp":"2023-09-15T11:07:53.849Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:07:58.923Z"}
+{"level":"info","message":"GET /logs","timestamp":"2023-09-15T11:08:03.494Z"}
