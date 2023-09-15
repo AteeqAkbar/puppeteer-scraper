@@ -2,7 +2,7 @@ const fs = require("fs");
 const puppeteer = require("puppeteer");
 const puppeteerExtra = require("puppeteer-extra");
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
-const data = require("./combinedDataNew.json");
+const data = require("./combinedData.json");
 puppeteerExtra.use(AdblockerPlugin());
 
 const retryDelay = 5000; // 5 seconds (adjust as needed)
