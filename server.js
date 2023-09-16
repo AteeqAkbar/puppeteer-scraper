@@ -73,7 +73,7 @@ app.get("/data", (req, res) => {
               try {
                 // Wait for the element with id "location-information" to appear with a shorter timeout
                 await page.waitForSelector("#location-information", {
-                  timeout: 1000,
+                  timeout: 2000,
                 });
 
                 // Extract data from the table
