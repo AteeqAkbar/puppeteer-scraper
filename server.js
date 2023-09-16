@@ -74,7 +74,7 @@ app.get("/", (req, res) => {
               try {
                 // Wait for the element with id "location-information" to appear with a shorter timeout
                 await page.waitForSelector("#location-information", {
-                  timeout: 5000,
+                  timeout: 1000,
                 });
 
                 // Extract data from the table
@@ -112,6 +112,7 @@ app.get("/", (req, res) => {
                 );
               }
               // Add the new key-value pair to each item in the "data" array
+              console.log("get data of: ", item.name);
               console.log("get data of: ", item.link);
               item["detail"] = elementText;
               success = true;
