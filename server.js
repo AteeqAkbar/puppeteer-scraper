@@ -26,7 +26,7 @@ console.log = function (...args) {
   };
   originalConsoleLog.apply(console, args);
   logStream.write(JSON.stringify(logEntry) + "\n");
-  logBuffer.push(logEntry);
+  logBuffer.unshift(logEntry);
 };
 
 // Middleware to expose logs via an API endpoint
