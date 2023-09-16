@@ -8,7 +8,7 @@ const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 const data = require("./test.json");
 puppeteerExtra.use(AdblockerPlugin());
 const app = express();
-const port = 3006;
+const port = 3005;
 
 // Create a writable stream for logs
 const logStream = fs.createWriteStream("app-logs.txt", { flags: "a" });
