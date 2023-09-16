@@ -37,7 +37,7 @@ app.use("/logs", (req, res) => {
 app.get("/hello", (req, res) => {
   res.json({ message: "Hello, logging API!" });
 });
-app.get("/", (req, res) => {
+app.get("/data", (req, res) => {
   const retryDelay = 5000; // 5 seconds (adjust as needed)
   const maxRetries = 5; // Maximum number of retries (adjust as needed)
 
