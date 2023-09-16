@@ -7,7 +7,7 @@ const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 const data = require("./combinedData.json");
 puppeteerExtra.use(AdblockerPlugin());
 const app = express();
-const port = 3006;
+const port = 3005;
 
 // Create a writable stream for logs
 const logStream = fs.createWriteStream("app-logs.txt", { flags: "a" });
@@ -73,7 +73,7 @@ app.get("/", (req, res) => {
               try {
                 // Wait for the element with id "location-information" to appear with a shorter timeout
                 await page.waitForSelector("#location-information", {
-                  timeout: 5000,
+                  timeout: 1000,
                 });
 
                 // Extract data from the table
@@ -111,6 +111,7 @@ app.get("/", (req, res) => {
                 );
               }
               // Add the new key-value pair to each item in the "data" array
+              console.log("get data of: ", item.name);
               console.log("get data of: ", item.link);
               item["detail"] = elementText;
               success = true;
