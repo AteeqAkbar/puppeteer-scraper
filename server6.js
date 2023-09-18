@@ -12,7 +12,7 @@ puppeteerExtra.use(AdblockerPlugin());
 const app = express();
 
 // Create a writable stream for logs
-const logStream = fs.createWriteStream("app-logs.txt", { flags: "a" });
+// const logStream = fs.createWriteStream("app-logs.txt", { flags: "a" });
 
 // Create an in-memory buffer for logs
 const logBuffer = [];
@@ -27,7 +27,7 @@ console.log = function (...args) {
       .join(" "),
   };
   originalConsoleLog.apply(console, args);
-  logStream.write(JSON.stringify(logEntry) + "\n");
+  // logStream.write(JSON.stringify(logEntry) + "\n");
   logBuffer.unshift(logEntry);
 };
 
