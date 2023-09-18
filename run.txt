@@ -1,0 +1,24 @@
+1:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+2:
+. ~/.nvm/nvm.sh
+3:
+nvm install --lts
+4: 
+git clone https://github.com/AteeqAkbar/puppeteer-scraper.git
+5:
+apt update
+6:
+apt install libatk1.0-0 libatk1.0-dev
+apt install libatk-bridge2.0-0
+apt install libcups2
+apt install libxkbcommon0
+apt install libxcomposite1
+apt install libxdamage1
+apt install libxfixes3
+apt install libxrandr2
+apt install libgbm1
+apt install libpango-1.0-0
+apt install libcairo2
+apt install libasound2
+7:

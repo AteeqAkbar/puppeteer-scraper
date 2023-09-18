@@ -7,7 +7,7 @@ const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 const { second } = require("./exportsData");
 // const data = require("./combinedData.json");
 const data = [second];
-const port = 3002;
+const port = 3001;
 puppeteerExtra.use(AdblockerPlugin());
 const app = express();
 
