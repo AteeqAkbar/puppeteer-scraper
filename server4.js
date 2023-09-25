@@ -63,7 +63,7 @@ app.get("/data", (req, res) => {
           while (!success && retryCount < maxRetries) {
             try {
               await page.goto(item.link, { timeout: 180000 });
-              await page.waitForNavigation({ waitUntil: 'load',  timeout: 180000});
+              // await page.waitForNavigation({ waitUntil: 'load'});
               await page.waitForSelector("#overview", {
                 timeout: 60000,
               });
