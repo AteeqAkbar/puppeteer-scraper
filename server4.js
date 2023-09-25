@@ -64,7 +64,7 @@ app.get("/data", (req, res) => {
             try {
               await page.goto(item.link, { timeout: 180000 });
               await page.waitForSelector("#overview", {
-                timeout: 2000,
+                timeout: 5000,
               });
               const elementText = await page.evaluate(() => {
                 
