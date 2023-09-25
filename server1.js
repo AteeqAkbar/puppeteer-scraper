@@ -132,7 +132,7 @@ app.get("/data", (req, res) => {
     }
 
     // console.log(data, "data");
-    fs.writeFileSync("final1.json", JSON.stringify(data, null, 2));
+    fs.writeFileSync("final01.json", JSON.stringify(data, null, 2));
     console.log(
       "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ get all data @@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     );
