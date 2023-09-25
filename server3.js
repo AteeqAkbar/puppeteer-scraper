@@ -40,7 +40,7 @@ app.get("/hello", (req, res) => {
   res.json({ message: "Hello, logging API!" });
 });
 app.get("/data", (req, res) => {
-  const retryDelay = 2000; // 5 seconds (adjust as needed)
+  const retryDelay = 1000; // 5 seconds (adjust as needed)
   const maxRetries = 5; // Maximum number of retries (adjust as needed)
 
   (async () => {
