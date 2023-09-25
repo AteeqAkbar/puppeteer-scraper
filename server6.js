@@ -63,6 +63,9 @@ app.get("/data", (req, res) => {
           while (!success && retryCount < maxRetries) {
             try {
               await page.goto(item.link, { timeout: 180000 });
+              await page.waitForSelector("#overview", {
+                timeout: 2000,
+              });
               const elementText = await page.evaluate(() => {
                 const element = document.querySelector("#overview");
 
