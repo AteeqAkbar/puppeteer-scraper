@@ -1,36 +1,37 @@
 const axios = require("axios");
 const fs = require("fs");
 
-const apiUrl = "http://localhost:1337"; // Replace with your Strapi API URL
+// const apiUrl = "http://localhost:1337"; // Replace with your Strapi API URL
+const apiUrl = "http://127.0.0.1:1337"; // Replace with your Strapi API URL
 //  ///for categories
-const data = require("./final.json");
-const contentType = "categories"; // Replace with your content type name
+// const data = require("./final00.json");
+// const contentType = "categories"; // Replace with your content type name
 
-(async () => {
-  for (const i of data) {
-    // Replace with your Strapi API URL
+// (async () => {
+//   for (const i of data) {
+//     // Replace with your Strapi API URL
 
-    try {
-      const res = await axios.post(`${apiUrl}/api/${contentType}`, {
-        data: { name: i.cat },
-      });
-      i.id = await res?.data?.data?.id;
-      console.log(
-        "New post created:",
-        await res.res?.data?.data?.id,
-        "=",
-        i.cat
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  fs.writeFileSync("finalWithCatId00.json", JSON.stringify(data, null, 2));
+//     try {
+//       const res = await axios.post(`${apiUrl}/api/${contentType}`, {
+//         data: { name: i.cat },
+//       });
+//       i.id = await res?.data?.data?.id;
+//       console.log(
+//         "New post created:",
+//         await res.res?.data?.data?.id,
+//         "=",
+//         i.cat
+//       );
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+//   fs.writeFileSync("final00WithCatId00.json", JSON.stringify(data, null, 2));
 //   console.log(total, "totall");
-})();
+// })();
 
 //  ///for sub categories
-// const data = require("./finalWithCatId.json");
+// const data = require("./final00WithCatId00.json");
 // const contentType = "sub-categories"; // Replace with your content type name
 
 // total = 0;
@@ -64,9 +65,9 @@ const contentType = "categories"; // Replace with your content type name
 //   console.log(total, "totall");
 // })();
 
-//  ///for product
+///for product
 
-// const contentType = "sub-categories"; // Replace with your content type name
+// const contentType = "products"; // Replace with your content type name
 // const data = require("./finalWithSubId.json");
 
 // total = 0;
@@ -75,36 +76,36 @@ const contentType = "categories"; // Replace with your content type name
 //     console.log(cat.sub.length, "length");
 //     // Replace with your Strapi API URL
 //     for (const iterator of cat.sub) {
-//       console.log(iterator.data.length, "++");
+//       console.log(iterator.id, "++");
 //       for (const iter of iterator.data) {
-//         console.log(++total, "++");
-//         //   try {
-//         //     const res = await axios.post(`${apiUrl}/api/${contentType}`, {
-//         //       data: {
-//         //         name: iterator.subcat.name,
-//         //         overview: iterator.subcat.detail,
-//         //         category: cat.id,
-//         //       },
-//         //     });
-//         //     iterator.id = await res?.data?.data?.id;
-//         //     console.log(
-//         //       "New post created:",
-//         //       await res.res?.data?.data?.id,
-//         //       "=",
-//         //       iterator.subcat.name
-//         //     );
-//         //   } catch (error) {
-//         //     console.log(error);
-//         //   }
+//         const { name, link, detail, ...tavledata } = iter;
+//         // console.log(++total, "++");
+//         console.log(name, link, { ...tavledata }, "--");
+
+//         try {
+//           const res = await axios.post(`${apiUrl}/api/${contentType}`, {
+//             data: {
+//               name: name,
+//               overview: detail,
+//               sub_category: iterator.id,
+//               tabledata: {...tavledata},
+//             },
+//           });
+//           // iterator.id = await res?.data?.data?.id;
+//           console.log(
+//             "New product created:",
+//             await res.res?.data?.data?.id,
+//             "="
+//             // iterator.subcat.name
+//           );
+//         } catch (error) {
+//           console.log(error);
+//         }
 //       }
 //     }
 //   }
 //   console.log(total, "totall");
 // })();
-
-
-
-
 
 // get all keys
 
