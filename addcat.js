@@ -2,7 +2,8 @@ const axios = require("axios");
 const fs = require("fs");
 
 // const apiUrl = "http://localhost:1337"; // Replace with your Strapi API URL
-const apiUrl = "http://127.0.0.1:1337"; // Replace with your Strapi API URL
+// const apiUrl = "http://127.0.0.1:1337"; // Replace with your Strapi API URL
+const apiUrl = "https://strapi-demo-tupho.ondigitalocean.app"; // Replace with your Strapi API URL
 //  ///for categories
 // const data = require("./final00.json");
 // const contentType = "categories"; // Replace with your content type name
@@ -26,12 +27,12 @@ const apiUrl = "http://127.0.0.1:1337"; // Replace with your Strapi API URL
 //       console.log(error);
 //     }
 //   }
-//   fs.writeFileSync("final00WithCatId00.json", JSON.stringify(data, null, 2));
-//   console.log(total, "totall");
+//   fs.writeFileSync("final001WithCatId001.json", JSON.stringify(data, null, 2));
+// // //  console.log(total, "totall");
 // })();
 
 //  ///for sub categories
-// const data = require("./final00WithCatId00.json");
+// const data = require("./final001WithCatId001.json");
 // const contentType = "sub-categories"; // Replace with your content type name
 
 // total = 0;
@@ -67,45 +68,45 @@ const apiUrl = "http://127.0.0.1:1337"; // Replace with your Strapi API URL
 
 ///for product
 
-// const contentType = "products"; // Replace with your content type name
-// const data = require("./finalWithSubId.json");
+const contentType = "products"; // Replace with your content type name
+const data = require("./finalWithSubId.json");
 
-// total = 0;
-// (async () => {
-//   for (const cat of data) {
-//     console.log(cat.sub.length, "length");
-//     // Replace with your Strapi API URL
-//     for (const iterator of cat.sub) {
-//       console.log(iterator.id, "++");
-//       for (const iter of iterator.data) {
-//         const { name, link, detail, ...tavledata } = iter;
-//         // console.log(++total, "++");
-//         console.log(name, link, { ...tavledata }, "--");
+total = 0;
+(async () => {
+  for (const cat of data) {
+    console.log(cat.sub.length, "length");
+    // Replace with your Strapi API URL
+    for (const iterator of cat.sub) {
+      console.log(iterator.id, "++");
+      for (const iter of iterator.data) {
+        const { name, link, detail, ...tavledata } = iter;
+        // console.log(++total, "++");
+        console.log(name, link, { ...tavledata }, "--");
 
-//         try {
-//           const res = await axios.post(`${apiUrl}/api/${contentType}`, {
-//             data: {
-//               name: name,
-//               overview: detail,
-//               sub_category: iterator.id,
-//               tabledata: {...tavledata},
-//             },
-//           });
-//           // iterator.id = await res?.data?.data?.id;
-//           console.log(
-//             "New product created:",
-//             await res.res?.data?.data?.id,
-//             "="
-//             // iterator.subcat.name
-//           );
-//         } catch (error) {
-//           console.log(error);
-//         }
-//       }
-//     }
-//   }
-//   console.log(total, "totall");
-// })();
+        try {
+          const res = await axios.post(`${apiUrl}/api/${contentType}`, {
+            data: {
+              name: name,
+              overview: detail,
+              sub_category: iterator.id,
+              tabledata: {...tavledata},
+            },
+          });
+          // iterator.id = await res?.data?.data?.id;
+          console.log(
+            "New product created:",
+            await res.res?.data?.data?.id,
+            "="
+            // iterator.subcat.name
+          );
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
+  }
+  console.log(total, "totall");
+})();
 
 // get all keys
 
